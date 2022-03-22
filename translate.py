@@ -1,6 +1,6 @@
 # encoding=utf-8
 
-from google_trans_new import google_translator
+from googletrans import Translator
 from sim_cilin import *
 from sim_hownet import *
 from sim_simhash import *
@@ -57,12 +57,12 @@ def baidu_translate_text(q, fromLang = 'en', toLang = 'zh'):
 
 
 def google_translate_text(text):
-    translator = google_translator(timeout=10)
+    translator = Translator(service_urls=['translate.google.cn'])
     result = []
 
     #中-英-中
-    en = translator.translate(text, 'en')
-    ch_en_ch =translator.translate(en, 'zh-cn')
+    en = translator.translate(text, 'en').text
+    ch_en_ch =translator.translate(en, 'zh-cn').text
     ch_en_ch_Baidu = baidu_translate_text(en, fromLang='auto', toLang='zh')
     result.append(ch_en_ch_Baidu)
     result.append(ch_en_ch)
@@ -70,8 +70,8 @@ def google_translate_text(text):
 
     #中-法-中
     # translator = Translator()
-    fr = translator.translate(text, 'fr')
-    ch_fr_ch =translator.translate(fr, 'zh-cn')
+    fr = translator.translate(text, 'fr').text
+    ch_fr_ch =translator.translate(fr, 'zh-cn').text
     ch_fr_ch_Baidu = baidu_translate_text(fr, fromLang='auto', toLang='zh')
     result.append(ch_fr_ch_Baidu)
     result.append(ch_fr_ch)
@@ -79,8 +79,8 @@ def google_translate_text(text):
 
     #中-德-中
     # translator = Translator()
-    de = translator.translate(text, 'de')
-    ch_de_ch =translator.translate(de, 'zh-cn')
+    de = translator.translate(text, 'de').text
+    ch_de_ch =translator.translate(de, 'zh-cn').text
     ch_de_ch_Baidu = baidu_translate_text(de, fromLang='auto', toLang='zh')
     result.append(ch_de_ch_Baidu)
     result.append(ch_de_ch)
@@ -88,8 +88,8 @@ def google_translate_text(text):
 
     #中-韩-中
     # translator = Translator()
-    ko = translator.translate(text, 'ko')
-    ch_ko_ch =translator.translate(ko, 'zh-cn')
+    ko = translator.translate(text, 'ko').text
+    ch_ko_ch =translator.translate(ko, 'zh-cn').text
     ch_ko_ch_Baidu = baidu_translate_text(ko, fromLang='auto', toLang='zh')
     result.append(ch_ko_ch_Baidu)
     result.append(ch_ko_ch)
@@ -97,8 +97,8 @@ def google_translate_text(text):
 
     #中-俄-中
     # translator = Translator()
-    ru = translator.translate(text, 'ru')
-    ch_ru_ch =translator.translate(ru, 'zh-cn')
+    ru = translator.translate(text, 'ru').text
+    ch_ru_ch =translator.translate(ru, 'zh-cn').text
     ch_ru_ch_Baidu = baidu_translate_text(ru, fromLang='auto', toLang='zh')
     result.append(ch_ru_ch_Baidu)
     result.append(ch_ru_ch)
@@ -106,8 +106,8 @@ def google_translate_text(text):
 
     #中-西班牙-中
     # translator = Translator()
-    es = translator.translate(text, 'es')
-    ch_es_ch =translator.translate(es, 'zh-cn')
+    es = translator.translate(text, 'es').text
+    ch_es_ch =translator.translate(es, 'zh-cn').text
     ch_es_ch_Baidu = baidu_translate_text(es, fromLang='auto', toLang='zh')
     result.append(ch_es_ch_Baidu)
     result.append(ch_es_ch)
@@ -115,8 +115,8 @@ def google_translate_text(text):
 
     #中-阿拉伯语-中
     # translator = Translator()
-    ar = translator.translate(text, 'ru')
-    ch_ar_ch =translator.translate(ar, 'zh-cn')
+    ar = translator.translate(text, 'ru').text
+    ch_ar_ch =translator.translate(ar, 'zh-cn').text
     ch_ar_ch_Baidu = baidu_translate_text(ar, fromLang='auto', toLang='zh')
     result.append(ch_ar_ch_Baidu)
     result.append(ch_ar_ch)
@@ -124,8 +124,8 @@ def google_translate_text(text):
 
     #中-日-中
     # translator = Translator()
-    ja = translator.translate(text, 'ja')
-    ch_ja_ch =translator.translate(ja, 'zh-cn')
+    ja = translator.translate(text, 'ja').text
+    ch_ja_ch =translator.translate(ja, 'zh-cn').text
     ch_ja_ch_Baidu = baidu_translate_text(ja, fromLang='auto', toLang='zh')
     result.append(ch_ja_ch_Baidu)
     result.append(ch_ja_ch)
@@ -152,8 +152,9 @@ if __name__ == "__main__":
     text = "无所畏惧"
     sim_text = []
     sim_text.append("无所畏惧")
-
-
+    translator = Translator(service_urls=['translate.google.cn'])
+    translation = translator.translate('hello world', dest='zh-cn')
+    print(translation.text)
 
     result = {}
     for x in google_translate_text(text):
