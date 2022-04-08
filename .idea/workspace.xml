@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="292badc8-1ba4-4815-8b0e-9f99a08e8bc7" name="默认更改列表" comment="更新帖子地址">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="292badc8-1ba4-4815-8b0e-9f99a08e8bc7" name="默认更改列表" comment="更新帖子地址*2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +144,7 @@
       <workItem from="1648280209352" duration="2072000" />
       <workItem from="1648641032777" duration="718000" />
       <workItem from="1648794403027" duration="121000" />
-      <workItem from="1649295974478" duration="910000" />
+      <workItem from="1649295974478" duration="1550000" />
     </task>
     <task id="LOCAL-00001" summary="默认更改列表">
       <created>1647924304202</created>
@@ -163,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648794447590</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="更新帖子地址*2">
+      <created>1649296933911</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649296933911</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +200,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="默认更改列表" />
     <MESSAGE value="更新帖子地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新帖子地址" />
+    <MESSAGE value="更新帖子地址*2" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新帖子地址*2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
